@@ -288,7 +288,274 @@ ul li, ol li {
     color: #333;
   }
   
-  /* Add a responsive design for smaller screens */
+/* recomended coures section */
+
+/* General Section Styling */
+#recommended-courses {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#recommended-courses h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#recommended-courses p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Flexbox Layout for Course Cards */
+.course-cards {
+  display: flex;
+  justify-content: space-between; /* Evenly space the cards */
+  gap: 30px;
+  flex-wrap: nowrap; /* Prevent wrapping, keeping the cards in one line */
+  margin-top: 30px;
+}
+
+/* Styling for Each Course Card */
+.course-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  width: 30%; /* Ensures each card takes 30% of the width */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.course-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.course-card h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling for Language Links */
+.language-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.course-link {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.course-link:hover {
+  background-color: #0056b3;
+}
+/* resurse */
+/* General styles for the section */
+#resources {
+  background-color: #f9f9f9;
+  padding: 40px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+#resources .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#resources h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+#resources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#resources li {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+#resources a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#resources a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+span {
+  color: #333;
+}
+
+/* Add a responsive design for smaller screens */
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 768px) {
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-image {
+    order: -1; /* This makes sure the image comes first (on top) */
+    width: 100%;
+  }
+
+  .intro-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .intro-text {
+    width: 100%;
+    margin-top: 20px; /* Add space between the image and the text */
+  }
+
+  #resources h2 {
+    font-size: 24px;
+  }
+
+  #resources li {
+    font-size: 16px;
+  }
+}
+
+/* Courses Section */
+.courses {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;  /* Makes it responsive */
+}
+
+.course-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Gooey Button Styles */
+.c-button {
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+
+.c-button--gooey {
+  color: #06c8d9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid #06c8d9;
+  border-radius: 0;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+  background-color: #06c8d9;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+  color: #fff;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .courses {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
 
  /* Mobile Responsive Styling */
 @media screen and (max-width: 768px) {
@@ -321,7 +588,71 @@ ul li, ol li {
     #resources li {
       font-size: 16px;
     }
+     /* Course Cards Section */
+  #recommended-courses {
+    padding: 20px 10px;
   }
+
+  #recommended-courses .container {
+    max-width: 100%;
+  }
+
+  #recommended-courses h2 {
+    font-size: 2rem;
+  }
+
+  #recommended-courses p {
+    font-size: 1rem;
+  }
+
+  .course-cards {
+    grid-template-columns: repeat(2, 1fr); /* Two cards in one line */
+    gap: 20px;
+  }
+
+  .course-card {
+    max-width: 100%; /* Cards take full width within grid column */
+    padding: 15px;
+  }
+
+  .course-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .course-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .course-link {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Footer */
